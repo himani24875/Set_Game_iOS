@@ -15,6 +15,9 @@
 		F68CCE062387B0E8000B093F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68CCE042387B0E8000B093F /* LaunchScreen.storyboard */; };
 		F68CCE112387B0E8000B093F /* SetGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68CCE102387B0E8000B093F /* SetGameTests.swift */; };
 		F68CCE1C2387B0E8000B093F /* SetGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68CCE1B2387B0E8000B093F /* SetGameUITests.swift */; };
+		F68CCE2E2387B278000B093F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68CCE2D2387B278000B093F /* Card.swift */; };
+		F68CCE302387E5B0000B093F /* SetGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68CCE2F2387E5B0000B093F /* SetGame.swift */; };
+		F68CCE32238BD891000B093F /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68CCE31238BD891000B093F /* Shape.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		F68CCE172387B0E8000B093F /* SetGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SetGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68CCE1B2387B0E8000B093F /* SetGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGameUITests.swift; sourceTree = "<group>"; };
 		F68CCE1D2387B0E8000B093F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F68CCE2D2387B278000B093F /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		F68CCE2F2387E5B0000B093F /* SetGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGame.swift; sourceTree = "<group>"; };
+		F68CCE31238BD891000B093F /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +105,11 @@
 		F68CCDF82387B0E1000B093F /* SetGame */ = {
 			isa = PBXGroup;
 			children = (
-				F68CCDF92387B0E2000B093F /* AppDelegate.swift */,
-				F68CCDFB2387B0E2000B093F /* SceneDelegate.swift */,
-				F68CCDFD2387B0E2000B093F /* ViewController.swift */,
-				F68CCDFF2387B0E2000B093F /* Main.storyboard */,
+				F68CCE2C2387B20C000B093F /* view */,
+				F68CCE2B2387B1EE000B093F /* model */,
+				F68CCE2A2387B1DC000B093F /* controller */,
+				F68CCE292387B1B3000B093F /* HelperFiles */,
 				F68CCE022387B0E8000B093F /* Assets.xcassets */,
-				F68CCE042387B0E8000B093F /* LaunchScreen.storyboard */,
 				F68CCE072387B0E8000B093F /* Info.plist */,
 			);
 			path = SetGame;
@@ -126,6 +131,42 @@
 				F68CCE1D2387B0E8000B093F /* Info.plist */,
 			);
 			path = SetGameUITests;
+			sourceTree = "<group>";
+		};
+		F68CCE292387B1B3000B093F /* HelperFiles */ = {
+			isa = PBXGroup;
+			children = (
+				F68CCDFB2387B0E2000B093F /* SceneDelegate.swift */,
+				F68CCDF92387B0E2000B093F /* AppDelegate.swift */,
+			);
+			path = HelperFiles;
+			sourceTree = "<group>";
+		};
+		F68CCE2A2387B1DC000B093F /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				F68CCDFD2387B0E2000B093F /* ViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		F68CCE2B2387B1EE000B093F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				F68CCE2D2387B278000B093F /* Card.swift */,
+				F68CCE2F2387E5B0000B093F /* SetGame.swift */,
+				F68CCE31238BD891000B093F /* Shape.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		F68CCE2C2387B20C000B093F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				F68CCE042387B0E8000B093F /* LaunchScreen.storyboard */,
+				F68CCDFF2387B0E2000B093F /* Main.storyboard */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,8 +301,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F68CCDFE2387B0E2000B093F /* ViewController.swift in Sources */,
+				F68CCE32238BD891000B093F /* Shape.swift in Sources */,
 				F68CCDFA2387B0E2000B093F /* AppDelegate.swift in Sources */,
+				F68CCE302387E5B0000B093F /* SetGame.swift in Sources */,
 				F68CCDFC2387B0E2000B093F /* SceneDelegate.swift in Sources */,
+				F68CCE2E2387B278000B093F /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
