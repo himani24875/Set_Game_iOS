@@ -16,6 +16,8 @@ struct SetGame {
     var score = 0
     private var indicesOfMatchedCards = [Int]()
     
+    var hintCard = [Int]()
+    
     private(set) var board = [Card]() {
         didSet {
             assert(board.count <= 24, "Set.board: board cannot contain more than 24 cards")
@@ -63,7 +65,7 @@ struct SetGame {
         }
         
         if selectedCards.count == 3 {
-            if doesMakeSet(selected: selectedCards) {
+            if doesMakeSet(selectedCard: selectedCards) {
                 score += 3
                 currentSelectionIsMatch = true
                 for card in selectedCards {
@@ -125,19 +127,27 @@ struct SetGame {
         return newDeck
     }
     
-    private func doesMakeSet(selected: [Card]) -> Bool {
+    private func doesMakeSet(selectedCard: [Card]) -> Bool {
+        let color = Set(selectedCard.map{ $0.color }).count
+        let shape = Set(selectedCard.map{ $0.shape }).count
+        let number = Set(selectedCard.map{ $0.noOfItems }).count
+        let fill = Set(selectedCard.map{ $0.shading }).count
         
-        let quantity = ((selected[0].noOfItems == selected[1].noOfItems) && (selected[1].noOfItems == selected[2].noOfItems)) || ((selected[0].noOfItems != selected[1].noOfItems) && (selected[1].noOfItems != selected[2].noOfItems) && (selected[2].noOfItems != selected[0].noOfItems))
-
-        let color = ((selected[0].color == selected[1].color) && (selected[1].color == selected[2].color)) || ((selected[0].color != selected[1].color) && (selected[1].color != selected[2].color) && (selected[2].color != selected[0].color))
-
-        let shape = ((selected[0].shape == selected[1].shape) && (selected[1].shape == selected[2].shape)) || ((selected[0].shape != selected[1].shape) && (selected[1].shape != selected[2].shape) && (selected[2].shape != selected[0].shape))
-
-        let shading = ((selected[0].shading == selected[1].shading) && (selected[1].shading == selected[2].shading)) || ((selected[0].shading != selected[1].shading) && (selected[1].shading != selected[2].shading) && (selected[2].shading != selected[0].shading))
-
-        return (quantity && color && shading && shape)
-        
-//        return true
+        return color != 2 && shape != 2 && number != 2 && fill != 2
+    }
+    
+    mutating func hint() {
+        hintCard.removeAll()
+        for i in 0..<board.count {
+            for j in (i + 1)..<board.count {
+                for k in (j + 1)..<board.count {
+                    let hints = [board[i], board[j], board[k]]
+                    if doesMakeSet(selectedCard: hints) {
+                        hintCard += [i, j, k]
+                    }
+                }
+            }
+        }
     }
 }
 

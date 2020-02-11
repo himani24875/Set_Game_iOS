@@ -11,7 +11,9 @@ import UIKit
 class ViewController: UIViewController {
     
     private var game = SetGame()
-            
+    
+    private var hintedButton = [UIButton]()
+    
     @IBOutlet var cardButtons: [UIButton]!
     @IBOutlet weak var deal3MoreCardsLabel: UIButton!
     @IBOutlet weak var gameScoreLabel: UILabel!
@@ -95,6 +97,7 @@ class ViewController: UIViewController {
     @IBAction func startNewGame(_ sender: UIButton) {
         game = SetGame()
         updateViewFromModel()
+        hintedButton.removeAll()
     }
     
     @IBAction func touchCard(_ sender: UIButton) {
@@ -103,6 +106,20 @@ class ViewController: UIViewController {
             updateViewFromModel()
         }
     }
+    
+    @IBAction func hintBtnAction(_ sender: Any) {
+        game.hint()
+        if game.hintCard.count > 0 {
+            for hint in 0...2 {
+                let index = game.hintCard[hint]
+                cardButtons[index].layer.borderColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+                cardButtons[index].layer.borderWidth = 3.0
+                hintedButton.append(cardButtons[index])
+            }
+            hintedButton.removeAll()
+        }
+    }
+    
 }
 
 extension UIButton {

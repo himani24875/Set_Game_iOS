@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -423,17 +423,30 @@
                                     <action selector="startNewGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5vR-W8-WAN"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5c-NO-csY">
+                                <rect key="frame" x="354" y="677" width="34" height="32"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
+                                <state key="normal" title="Hint">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="hintBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rUl-ay-1K1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="ud7-Dy-Tc6" firstAttribute="top" secondItem="6Il-t7-4KR" secondAttribute="bottom" constant="15" id="020-FO-hpa"/>
                             <constraint firstItem="jju-4J-4dl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6Xa-Tn-eqD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q5c-NO-csY" secondAttribute="trailing" constant="26" id="EIQ-ay-5vR"/>
                             <constraint firstItem="ud7-Dy-Tc6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="G3t-Ff-x8V"/>
                             <constraint firstItem="8OI-Mp-p8v" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Gkz-GC-QOO"/>
                             <constraint firstItem="6Il-t7-4KR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Hjg-xH-V96"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jju-4J-4dl" secondAttribute="bottom" constant="25" id="Lmd-kf-0xO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7aJ-Ld-Yuq" secondAttribute="trailing" constant="20" id="PcI-cU-czL"/>
+                            <constraint firstItem="Q5c-NO-csY" firstAttribute="top" secondItem="7aJ-Ld-Yuq" secondAttribute="bottom" constant="33" id="QwV-ej-068"/>
                             <constraint firstItem="8OI-Mp-p8v" firstAttribute="top" secondItem="ud7-Dy-Tc6" secondAttribute="bottom" constant="20" id="j8D-0k-I3j"/>
+                            <constraint firstItem="Q5c-NO-csY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Il-t7-4KR" secondAttribute="trailing" constant="8" symbolic="YES" id="k9h-fv-UOQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jju-4J-4dl" secondAttribute="trailing" constant="20" id="kFx-1h-42L"/>
                             <constraint firstItem="7aJ-Ld-Yuq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="p5R-eB-Zbo"/>
                             <constraint firstItem="7aJ-Ld-Yuq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="qg8-6G-d9O"/>

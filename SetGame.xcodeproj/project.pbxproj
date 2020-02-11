@@ -18,6 +18,8 @@
 		F68CCE2E2387B278000B093F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68CCE2D2387B278000B093F /* Card.swift */; };
 		F68CCE302387E5B0000B093F /* SetGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68CCE2F2387E5B0000B093F /* SetGame.swift */; };
 		F68CCE32238BD891000B093F /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68CCE31238BD891000B093F /* Shape.swift */; };
+		F6D1219B23F297160046C537 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D1219A23F297160046C537 /* Grid.swift */; };
+		F6D1219D23F2972D0046C537 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D1219C23F2972D0046C537 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		F68CCE2D2387B278000B093F /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		F68CCE2F2387E5B0000B093F /* SetGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGame.swift; sourceTree = "<group>"; };
 		F68CCE31238BD891000B093F /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		F6D1219A23F297160046C537 /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		F6D1219C23F2972D0046C537 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,8 +167,10 @@
 		F68CCE2C2387B20C000B093F /* view */ = {
 			isa = PBXGroup;
 			children = (
+				F6D1219A23F297160046C537 /* Grid.swift */,
 				F68CCE042387B0E8000B093F /* LaunchScreen.storyboard */,
 				F68CCDFF2387B0E2000B093F /* Main.storyboard */,
+				F6D1219C23F2972D0046C537 /* CardView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -305,6 +311,8 @@
 				F68CCDFA2387B0E2000B093F /* AppDelegate.swift in Sources */,
 				F68CCE302387E5B0000B093F /* SetGame.swift in Sources */,
 				F68CCDFC2387B0E2000B093F /* SceneDelegate.swift in Sources */,
+				F6D1219B23F297160046C537 /* Grid.swift in Sources */,
+				F6D1219D23F2972D0046C537 /* CardView.swift in Sources */,
 				F68CCE2E2387B278000B093F /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
